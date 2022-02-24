@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>First EJS App</title>
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="main">
+    <% users.forEach(user=>{%>
+    <div class="user">
+      <h3 class="username"><%= user.name %></h3>
+      <p class="mail"><%= user.email %></p>
+    </div>
+    <%})%>
+    <br />
+    <div class="user-form">
+      <a href="/form"><button>Add User</button></a>
+    </div>
+  </body>
+</html>

@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const User = require("./model/todo");
 const bodyparser = require("body-parser");
 var methodOverride = require('method-override')
-
 const app = express();
 mongoose.connect('mongodb://localhost:27017/assignment');
 
@@ -16,6 +15,8 @@ app.use(bodyparser())
 
 app.set("views", "./views");
 app.set("view engine", "ejs");
+
+
 
 app.get("/", async (req, res) => {
     // add the code to read the data from data base

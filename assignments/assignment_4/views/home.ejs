@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Assignment-4</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="parent">
+      <% users.forEach((user)=>{ %>
+      <div class="inner">
+        <% if (user.isPromoted==null){%>
+        <div class="null-block">
+          <span>Name:<%= user.name%></span>
+          <span>&ensp;&ensp;&ensp;&ensp;</span>
+          <span>Email:<%= user.email%></span>
+        </div>
+        <% } else if(user.isPromoted==true) { %>
+        <div class="true-block">
+            <span>Name:<%= user.name%></span>
+            <span>&ensp;&ensp;&ensp;&ensp;</span>
+          <span>Email:<%= user.email%></span>
+        </div>
+        <% } else if(user.isPromoted==false){ %>
+        <div class="false-block">
+            <span>Name:<%= user.name%></span>
+            <span>&ensp;&ensp;&ensp;&ensp;</span>
+          <span>Email:<%= user.email%></span>
+          <span>&ensp;&ensp;&ensp;&ensp;</span>
+        </div>
+        
+        <%}%> 
+
+        <div class="constant-block-one">
+          <form method="post" action="/users/<%= user._id %>?_method=PUT">
+            <button id="edit-<%= user.name %>" type="submit">
+              Promote / Demote
+            </button>
+          </form>
+        </div>
+
+        <div class="constant-block-two">
+          <form method="post" action="/users/<%= user._id %>?_method=DELETE">
+            <button id="delete-<%= user.name %>">Delete</button>
+          </form>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+    <a href="/form"><button>Add User</button></a>
+  </body>
+</html>

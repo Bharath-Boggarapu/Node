@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user,.user-form {
+  background-color: aliceblue;
+  height: 20%;
+  width: 15%;
+  margin: 3px;
+  border: 1px solid black;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mail {
+  word-wrap: break-word;
+  width: 98%;
+  height: 5%;
+  text-align: center;
+}
+
+.username{
+    text-align: center;
+    margin: 1%
+}

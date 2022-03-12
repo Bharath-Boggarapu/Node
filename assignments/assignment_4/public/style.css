@@ -1,0 +1,30 @@
+.parent{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(27, 23, 23)
+}
+
+.inner{
+    display: flex;
+    height: 80px;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.null-block{
+    width:40%;
+    color: yellow
+}
+
+.true-block{
+    width:40%;
+    color: green;
+}
+
+.false-block{
+    width: 40%;
+    color: red;
+}
+
